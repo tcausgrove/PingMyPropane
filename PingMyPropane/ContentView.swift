@@ -19,7 +19,7 @@ extension VerticalAlignment {
 }
 
 struct ContentView: View {
-    @State var indicatorPercentage: CGFloat = 50.0
+    @State private var indicatorPercentage: CGFloat = 50.0
     
     var body: some View {
         NavigationView {
@@ -31,22 +31,16 @@ struct ContentView: View {
                         .foregroundColor(.accentColor)
                     Text("Ping my propane")
                 }
+                .font(.title2)
                 .onTapGesture {
                     indicatorPercentage = CGFloat.random(in: 0...100)
                 }
                 Spacer()
-                ZStack(alignment: .bottom) {
-                    Rectangle()
-                        .alignmentGuide(.bottomOfWholeTank) { d in d[VerticalAlignment.bottom]}
-                        .frame(width: 100, height: 200)
-                    Rectangle()
-                        .alignmentGuide(.bottomOfWholeTank) { d in d[VerticalAlignment.bottom]}
-                        .frame(width: 100, height: indicatorPercentage * 2)
-                        .foregroundColor(.red)
-                }
+                TankFullnessView(indicatorPercentage: $indicatorPercentage)
                 Spacer()
                 
             }
+            .navigationBarTitle("Ping My Propane")
         }
         .padding()
     }
@@ -62,5 +56,21 @@ func recordPing() {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct TankFullnessView: View {
+    @Binding var indicatorPercentage: CGFloat
+    
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            Rectangle()
+                .alignmentGuide(.bottomOfWholeTank) { d in d[VerticalAlignment.bottom]}
+                .frame(width: 100, height: 200)
+            Rectangle()
+                .alignmentGuide(.bottomOfWholeTank) { d in d[VerticalAlignment.bottom]}
+                .frame(width: 100, height: indicatorPercentage * 2)
+                .foregroundColor(.red)
+        }
     }
 }
