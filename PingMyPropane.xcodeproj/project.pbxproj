@@ -11,6 +11,11 @@
 		7846B7CD29BCDFF8007D2E58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846B7CC29BCDFF8007D2E58 /* ContentView.swift */; };
 		7846B7CF29BCDFF9007D2E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7846B7CE29BCDFF9007D2E58 /* Assets.xcassets */; };
 		7846B7D229BCDFF9007D2E58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7846B7D129BCDFF9007D2E58 /* Preview Assets.xcassets */; };
+		78A414F029D25B6A005CBEF1 /* PingRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A414EF29D25B6A005CBEF1 /* PingRecorder.swift */; };
+		78A4154529FDAD60005CBEF1 /* VoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4154429FDAD60005CBEF1 /* VoiceViewModel.swift */; };
+		78A4154729FDAE43005CBEF1 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4154629FDAE43005CBEF1 /* Recording.swift */; };
+		78A4154A29FDAE6B005CBEF1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4154829FDAE6B005CBEF1 /* Date.swift */; };
+		78A4154B29FDAE6B005CBEF1 /* convertSecToMinAndHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4154929FDAE6B005CBEF1 /* convertSecToMinAndHour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		7846B7CC29BCDFF8007D2E58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7846B7CE29BCDFF9007D2E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7846B7D129BCDFF9007D2E58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		78A414EF29D25B6A005CBEF1 /* PingRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingRecorder.swift; sourceTree = "<group>"; };
+		78A4154429FDAD60005CBEF1 /* VoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceViewModel.swift; sourceTree = "<group>"; };
+		78A4154629FDAE43005CBEF1 /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		78A4154829FDAE6B005CBEF1 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		78A4154929FDAE6B005CBEF1 /* convertSecToMinAndHour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = convertSecToMinAndHour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,13 @@
 		7846B7C929BCDFF8007D2E58 /* PingMyPropane */ = {
 			isa = PBXGroup;
 			children = (
+				78A414EF29D25B6A005CBEF1 /* PingRecorder.swift */,
+				78A4154929FDAE6B005CBEF1 /* convertSecToMinAndHour.swift */,
+				78A4154829FDAE6B005CBEF1 /* Date.swift */,
 				7846B7CA29BCDFF8007D2E58 /* PingMyPropaneApp.swift */,
+				78A4154429FDAD60005CBEF1 /* VoiceViewModel.swift */,
 				7846B7CC29BCDFF8007D2E58 /* ContentView.swift */,
+				78A4154629FDAE43005CBEF1 /* Recording.swift */,
 				7846B7CE29BCDFF9007D2E58 /* Assets.xcassets */,
 				7846B7D029BCDFF9007D2E58 /* Preview Content */,
 			);
@@ -138,7 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7846B7CD29BCDFF8007D2E58 /* ContentView.swift in Sources */,
+				78A4154A29FDAE6B005CBEF1 /* Date.swift in Sources */,
+				78A4154529FDAD60005CBEF1 /* VoiceViewModel.swift in Sources */,
+				78A4154B29FDAE6B005CBEF1 /* convertSecToMinAndHour.swift in Sources */,
 				7846B7CB29BCDFF8007D2E58 /* PingMyPropaneApp.swift in Sources */,
+				78A414F029D25B6A005CBEF1 /* PingRecorder.swift in Sources */,
+				78A4154729FDAE43005CBEF1 /* Recording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

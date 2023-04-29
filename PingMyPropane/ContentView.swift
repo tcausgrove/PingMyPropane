@@ -20,20 +20,29 @@ extension VerticalAlignment {
 
 struct ContentView: View {
     @State private var indicatorPercentage: CGFloat = 50.0
+    @StateObject var viewModel = VoiceViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 Spacer()
                 Section {
-                    Image(systemName: "record.circle")
-                        .imageScale(.large)
+                    Image(systemName: viewModel.isRecording ? "stop.circle.fill" : "mic.circle.fill")
+                        .font(.largeTitle)
                         .foregroundColor(.accentColor)
                     Text("Ping my propane")
                 }
                 .font(.title2)
                 .onTapGesture {
                     indicatorPercentage = CGFloat.random(in: 0...100)
+                    if viewModel.isRecording {
+                        viewModel.stopRecording()
+                    } else {
+                        viewModel.startRecording()
+                    }
+                }
+                .onAppear {
+//                    pingRecorder.prepareEngine()
                 }
                 Spacer()
                 TankFullnessView(indicatorPercentage: $indicatorPercentage)
@@ -44,13 +53,6 @@ struct ContentView: View {
         }
         .padding()
     }
-}
-
-func recordPing() {
-// Finish this later
-    
-//    let engine = AVAudioEngine()
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
